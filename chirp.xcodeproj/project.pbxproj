@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52234C6D1B124A7F006A3ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52234C6C1B124A7F006A3ACD /* AppDelegate.swift */; };
+		52234C6F1B124A7F006A3ACD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52234C6E1B124A7F006A3ACD /* ViewController.swift */; };
+		52234C721B124A7F006A3ACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52234C701B124A7F006A3ACD /* Main.storyboard */; };
+		52234C741B124A7F006A3ACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52234C731B124A7F006A3ACD /* Images.xcassets */; };
+		52234C771B124A7F006A3ACD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52234C751B124A7F006A3ACD /* LaunchScreen.xib */; };
+		52234C831B124A7F006A3ACD /* chirpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52234C821B124A7F006A3ACD /* chirpTests.swift */; };
+		524D7EAC1B125A6900B53B7E /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D7EAB1B125A6900B53B7E /* TwitterClient.swift */; };
+		524D7EAE1B1261F900B53B7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D7EAD1B1261F900B53B7E /* User.swift */; };
+		524D7EB11B12637E00B53B7E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D7EB01B12637E00B53B7E /* Tweet.swift */; };
+		524D7EB41B1266A900B53B7E /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D7EB31B1266A900B53B7E /* TweetsViewController.swift */; };
+		524D7EB71B1274BC00B53B7E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D7EB61B1274BC00B53B7E /* ProfileViewController.swift */; };
+		524EAAA11B1295EC00B9C5B2 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524EAAA01B1295EC00B9C5B2 /* TweetCell.swift */; };
+		820268B423C8C1C47764196E /* libPods-chirp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 011A12C8F0842F54F5795E3C /* libPods-chirp.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52234C7D1B124A7F006A3ACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52234C5F1B124A7F006A3ACD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52234C661B124A7F006A3ACD;
+			remoteInfo = chirp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		011A12C8F0842F54F5795E3C /* libPods-chirp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chirp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52234C671B124A7F006A3ACD /* chirp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chirp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52234C6B1B124A7F006A3ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52234C6C1B124A7F006A3ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52234C6E1B124A7F006A3ACD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52234C711B124A7F006A3ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52234C731B124A7F006A3ACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		52234C761B124A7F006A3ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		52234C7C1B124A7F006A3ACD /* chirpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chirpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52234C811B124A7F006A3ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52234C821B124A7F006A3ACD /* chirpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chirpTests.swift; sourceTree = "<group>"; };
+		524D7EA71B1259D200B53B7E /* chirp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chirp-Bridging-Header.h"; sourceTree = "<group>"; };
+		524D7EAB1B125A6900B53B7E /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		524D7EAD1B1261F900B53B7E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		524D7EB01B12637E00B53B7E /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		524D7EB31B1266A900B53B7E /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		524D7EB61B1274BC00B53B7E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		524EAAA01B1295EC00B9C5B2 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		55115A42BB6EF7598D5639EC /* Pods-chirp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirp.release.xcconfig"; path = "Pods/Target Support Files/Pods-chirp/Pods-chirp.release.xcconfig"; sourceTree = "<group>"; };
+		996A76D1629EC5AEF6CF46FA /* Pods-chirp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chirp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-chirp/Pods-chirp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52234C641B124A7F006A3ACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				820268B423C8C1C47764196E /* libPods-chirp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52234C791B124A7F006A3ACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		108F5D1ACAEFCAB9CB6A1D01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996A76D1629EC5AEF6CF46FA /* Pods-chirp.debug.xcconfig */,
+				55115A42BB6EF7598D5639EC /* Pods-chirp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52234C5E1B124A7F006A3ACD = {
+			isa = PBXGroup;
+			children = (
+				52234C691B124A7F006A3ACD /* chirp */,
+				52234C7F1B124A7F006A3ACD /* chirpTests */,
+				52234C681B124A7F006A3ACD /* Products */,
+				108F5D1ACAEFCAB9CB6A1D01 /* Pods */,
+				76E4E0961315729574BCF437 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52234C681B124A7F006A3ACD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52234C671B124A7F006A3ACD /* chirp.app */,
+				52234C7C1B124A7F006A3ACD /* chirpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52234C691B124A7F006A3ACD /* chirp */ = {
+			isa = PBXGroup;
+			children = (
+				524D7EB51B12697000B53B7E /* Views */,
+				524D7EAF1B1261FD00B53B7E /* Models */,
+				524D7EB21B12665E00B53B7E /* View Controllers */,
+				524D7EAA1B125A4E00B53B7E /* API */,
+				52234C701B124A7F006A3ACD /* Main.storyboard */,
+				52234C6C1B124A7F006A3ACD /* AppDelegate.swift */,
+				52234C731B124A7F006A3ACD /* Images.xcassets */,
+				52234C751B124A7F006A3ACD /* LaunchScreen.xib */,
+				524D7EA71B1259D200B53B7E /* chirp-Bridging-Header.h */,
+				52234C6A1B124A7F006A3ACD /* Supporting Files */,
+			);
+			path = chirp;
+			sourceTree = "<group>";
+		};
+		52234C6A1B124A7F006A3ACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52234C6B1B124A7F006A3ACD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52234C7F1B124A7F006A3ACD /* chirpTests */ = {
+			isa = PBXGroup;
+			children = (
+				52234C821B124A7F006A3ACD /* chirpTests.swift */,
+				52234C801B124A7F006A3ACD /* Supporting Files */,
+			);
+			path = chirpTests;
+			sourceTree = "<group>";
+		};
+		52234C801B124A7F006A3ACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52234C811B124A7F006A3ACD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		524D7EAA1B125A4E00B53B7E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				524D7EAB1B125A6900B53B7E /* TwitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		524D7EAF1B1261FD00B53B7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				524D7EAD1B1261F900B53B7E /* User.swift */,
+				524D7EB01B12637E00B53B7E /* Tweet.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		524D7EB21B12665E00B53B7E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52234C6E1B124A7F006A3ACD /* ViewController.swift */,
+				524D7EB31B1266A900B53B7E /* TweetsViewController.swift */,
+				524D7EB61B1274BC00B53B7E /* ProfileViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		524D7EB51B12697000B53B7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				524EAAA01B1295EC00B9C5B2 /* TweetCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		76E4E0961315729574BCF437 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				011A12C8F0842F54F5795E3C /* libPods-chirp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52234C661B124A7F006A3ACD /* chirp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52234C861B124A7F006A3ACD /* Build configuration list for PBXNativeTarget "chirp" */;
+			buildPhases = (
+				61901AE71B03893C2518C77F /* Check Pods Manifest.lock */,
+				52234C631B124A7F006A3ACD /* Sources */,
+				52234C641B124A7F006A3ACD /* Frameworks */,
+				52234C651B124A7F006A3ACD /* Resources */,
+				C094D8B4C8A509941499646C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chirp;
+			productName = chirp;
+			productReference = 52234C671B124A7F006A3ACD /* chirp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52234C7B1B124A7F006A3ACD /* chirpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52234C891B124A7F006A3ACD /* Build configuration list for PBXNativeTarget "chirpTests" */;
+			buildPhases = (
+				52234C781B124A7F006A3ACD /* Sources */,
+				52234C791B124A7F006A3ACD /* Frameworks */,
+				52234C7A1B124A7F006A3ACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52234C7E1B124A7F006A3ACD /* PBXTargetDependency */,
+			);
+			name = chirpTests;
+			productName = chirpTests;
+			productReference = 52234C7C1B124A7F006A3ACD /* chirpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52234C5F1B124A7F006A3ACD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Furious One";
+				TargetAttributes = {
+					52234C661B124A7F006A3ACD = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					52234C7B1B124A7F006A3ACD = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 52234C661B124A7F006A3ACD;
+					};
+				};
+			};
+			buildConfigurationList = 52234C621B124A7F006A3ACD /* Build configuration list for PBXProject "chirp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52234C5E1B124A7F006A3ACD;
+			productRefGroup = 52234C681B124A7F006A3ACD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52234C661B124A7F006A3ACD /* chirp */,
+				52234C7B1B124A7F006A3ACD /* chirpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52234C651B124A7F006A3ACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52234C721B124A7F006A3ACD /* Main.storyboard in Resources */,
+				52234C771B124A7F006A3ACD /* LaunchScreen.xib in Resources */,
+				52234C741B124A7F006A3ACD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52234C7A1B124A7F006A3ACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61901AE71B03893C2518C77F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C094D8B4C8A509941499646C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-chirp/Pods-chirp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52234C631B124A7F006A3ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524D7EAE1B1261F900B53B7E /* User.swift in Sources */,
+				524D7EB11B12637E00B53B7E /* Tweet.swift in Sources */,
+				524D7EB41B1266A900B53B7E /* TweetsViewController.swift in Sources */,
+				524EAAA11B1295EC00B9C5B2 /* TweetCell.swift in Sources */,
+				52234C6F1B124A7F006A3ACD /* ViewController.swift in Sources */,
+				524D7EB71B1274BC00B53B7E /* ProfileViewController.swift in Sources */,
+				524D7EAC1B125A6900B53B7E /* TwitterClient.swift in Sources */,
+				52234C6D1B124A7F006A3ACD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52234C781B124A7F006A3ACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52234C831B124A7F006A3ACD /* chirpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52234C7E1B124A7F006A3ACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52234C661B124A7F006A3ACD /* chirp */;
+			targetProxy = 52234C7D1B124A7F006A3ACD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52234C701B124A7F006A3ACD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52234C711B124A7F006A3ACD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52234C751B124A7F006A3ACD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52234C761B124A7F006A3ACD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52234C841B124A7F006A3ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52234C851B124A7F006A3ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52234C871B124A7F006A3ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996A76D1629EC5AEF6CF46FA /* Pods-chirp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = chirp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chirp/chirp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52234C881B124A7F006A3ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55115A42BB6EF7598D5639EC /* Pods-chirp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = chirp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "chirp/chirp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		52234C8A1B124A7F006A3ACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = chirpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chirp.app/chirp";
+			};
+			name = Debug;
+		};
+		52234C8B1B124A7F006A3ACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = chirpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chirp.app/chirp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52234C621B124A7F006A3ACD /* Build configuration list for PBXProject "chirp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52234C841B124A7F006A3ACD /* Debug */,
+				52234C851B124A7F006A3ACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52234C861B124A7F006A3ACD /* Build configuration list for PBXNativeTarget "chirp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52234C871B124A7F006A3ACD /* Debug */,
+				52234C881B124A7F006A3ACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52234C891B124A7F006A3ACD /* Build configuration list for PBXNativeTarget "chirpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52234C8A1B124A7F006A3ACD /* Debug */,
+				52234C8B1B124A7F006A3ACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52234C5F1B124A7F006A3ACD /* Project object */;
+}
