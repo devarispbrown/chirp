@@ -338,7 +338,7 @@
                                                 <action selector="cancelAction:" destination="x8u-3y-qBy" id="MnM-Ls-ndX"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Post Tweet" id="wr4-Vo-cXn">
+                                        <barButtonItem key="rightBarButtonItem" title="Post" id="wr4-Vo-cXn">
                                             <connections>
                                                 <action selector="postAction:" destination="x8u-3y-qBy" id="WBb-Ip-S6O"/>
                                             </connections>

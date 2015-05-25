@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewTweetViewController: UIViewController {
+class NewTweetViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var tweetTextView: UITextView!
     
@@ -42,7 +42,8 @@ class NewTweetViewController: UIViewController {
     @IBAction func cancelAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    /*
+    
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
