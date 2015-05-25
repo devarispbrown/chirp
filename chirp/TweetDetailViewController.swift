@@ -16,6 +16,8 @@ class TweetDetailViewController: UIViewController {
     @IBOutlet weak var screenName: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var retweetsCountLabel: UILabel!
+    @IBOutlet weak var favoritesCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,8 @@ class TweetDetailViewController: UIViewController {
         userName.text = tweet.user?.name
         screenName.text = "@\(tweet.user!.screenName!)"
         timeLabel.text = tweet.displayDate
+        favoritesCountLabel.text = "\(tweet.favoritesCount!)"
+        retweetsCountLabel.text = "\(tweet.retweetsCount!)"
 
         // Do any additional setup after loading the view.
         navigationItem.backBarButtonItem?.title = "Back"
@@ -48,6 +52,7 @@ class TweetDetailViewController: UIViewController {
         
         TwitterClient.sharedInstance.retweet(tweet.tweetId!, completion: { (error) -> Void in
             if(error == nil) {
+                self.retweetsCountLabel.text = "\(self.tweet.retweetsCount! + 1)"
                 button.imageView!.image = UIImage(named: "retweet_on.png")
             } else {
                 println(error)
@@ -64,6 +69,7 @@ class TweetDetailViewController: UIViewController {
         
         TwitterClient.sharedInstance.favorite(tweet.tweetId!, completion: { (error) -> Void in
             if(error == nil) {
+                self.favoritesCountLabel.text = "\(self.tweet.favoritesCount! + 1)"
                 button.imageView!.image = UIImage(named: "favorite_on.png")
             } else {
                 println(error)

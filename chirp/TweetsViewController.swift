@@ -82,7 +82,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             cell.favoriteButton.imageView!.image = UIImage(named: "favorite.png")
         }
         
-        return cell        
+        return cell
     }
     
     @IBAction func retweetAction(sender: AnyObject) {
