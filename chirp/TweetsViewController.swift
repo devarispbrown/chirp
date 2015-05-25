@@ -50,8 +50,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         return tweets.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tweetsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         var cell = tableView.dequeueReusableCellWithIdentifier("TweetCell") as! TweetCell
         var tweet = tweets[indexPath.row]
         var user = tweet.user!
@@ -59,12 +62,61 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         cell.tweetLabel.text = tweet.text
         cell.tweetLabel.preferredMaxLayoutWidth = 200.0
         
+        cell.userImageView.setImageWithURL(NSURL(string: user.profileImageUrl!))
         cell.nameLabel.text = user.name!
         cell.screenNameLabel.text = user.screenName!
-        cell.userImageView.setImageWithURL(NSURL(string: user.profileImageUrl!)!)
         cell.timeLabel.text = tweet.createdAt!.shortTimeAgoSinceNow()
-                
-        return cell
+        
+        cell.favoriteButton.tag = indexPath.row
+        cell.retweetButton.tag = indexPath.row
+        
+        if(tweet.retweeted!) {
+            cell.retweetButton.imageView!.image = UIImage(named: "retweet_on.png")
+        } else {
+            cell.retweetButton.imageView!.image = UIImage(named: "retweet.png")
+        }
+        
+        if(tweet.favorited!) {
+            cell.favoriteButton.imageView!.image = UIImage(named: "favorite_on.png")
+        } else {
+            cell.favoriteButton.imageView!.image = UIImage(named: "favorite.png")
+        }
+        
+        return cell        
+    }
+    
+    @IBAction func retweetAction(sender: AnyObject) {
+        var button = sender as! UIButton
+        var tweet = tweets[button.tag]
+        
+        if(tweet.retweeted!) {
+            return
+        }
+        
+        TwitterClient.sharedInstance.retweet(tweet.tweetId!, completion: { (error) -> Void in
+            if(error == nil) {
+                button.imageView!.image = UIImage(named: "retweet_on.png")
+            } else {
+                println(error)
+            }
+        })
+    }
+    
+    @IBAction func favoriteAction(sender: AnyObject) {
+        var button = sender as! UIButton
+        var tweet = tweets[button.tag]
+        
+        if(tweet.favorited!) {
+            return
+        }
+        
+        TwitterClient.sharedInstance.favorite(tweet.tweetId!, completion: { (error) -> Void in
+            if(error == nil) {
+                button.imageView!.image = UIImage(named: "favorite_on.png")
+            } else {
+                println(error)
+            }
+        })
     }
     
     func fetchTweets(completion: (() -> Void)?) {
@@ -87,16 +139,13 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
             self.refreshControl.endRefreshing()
         }
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "TweetDetail") {
+            var vc = segue.destinationViewController as! TweetDetailViewController
+            var index = tweetsTableView.indexPathForSelectedRow()!.row
+            vc.tweet = tweets[index]
+        }
     }
-    */
 
 }

@@ -14,6 +14,7 @@ class Tweet: NSObject {
     var tweetId: String?
     var createdAtString: String?
     var createdAt: NSDate?
+    var displayDate: String?
     var retweeted: Bool?
     var favorited: Bool?
     
@@ -32,6 +33,12 @@ class Tweet: NSObject {
         var formatter = NSDateFormatter()
         formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
         createdAt = formatter.dateFromString(createdAtString!)
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
+        dateFormatter.timeStyle = .MediumStyle
+//        dateFormatter.dateFormat = "EEEE MMMM d y"
+        displayDate = dateFormatter.stringFromDate(createdAt!)
     }
     
     class func fromArray(array: [NSDictionary]) -> [Tweet] {
